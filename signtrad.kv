@@ -1,0 +1,77 @@
+<Aspect>
+
+    WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    ForthWindow:
+
+    <MainWindow>:
+        name: "main"
+        Button:
+            text: "Choose one"
+            on_release:                     #performs navigation between interfaces
+                app.root.current = "second"
+            on_release:
+                app.root.current = "third"
+            on_release:
+                app.root.current = "forth"
+
+        BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
+
+            padding: 50
+            spacing: 20
+
+    <SecondWindow>:
+        name: "second"
+        Button:
+            text: "Not ok"
+            on_release:
+                app.root.current = "main"
+
+        BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
+
+            padding: 50
+            spacing: 20
+
+            Image:
+                source: 'D:/HandGestureReco/images/down.jpg'
+
+    <ThirdWindow>:
+        name: "third"
+        Button:
+            text: "Ok"
+            on_release:
+                app.root.current = "main"
+
+        BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
+
+            padding: 50
+            spacing: 20
+
+            Image:
+                source: 'D:/HandGestureReco/images/up.jpg'
+
+    <ForthWindow>:
+        name: "forth"
+        Button:
+            text: "Everything is lovely"
+            on_release:
+                app.root.current = "main"
+
+        BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
+
+            padding: 50
+            spacing: 20
+
+            Image:
+                source: 'D:/HandGestureReco/images/ok.jpg'
+

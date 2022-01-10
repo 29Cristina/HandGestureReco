@@ -1,1 +1,1 @@
-# HandGestureReco
+# Hand Gesture Recognition mobile application implemented in PyCharm Community edition using Python 3.9 and Kivy
